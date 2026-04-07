@@ -128,11 +128,14 @@ def generate():
             match = re.search(r'/bpk-tv/([^/]+)/', line)
             if match:
                 ch_name = match.group(1)
-                channels.append({"name": ch_name, "url": line})
+                # Strip query params/hashes from URL to keep base MPD path
+                clean_url = line.split('?')[0].split('#')[0]
+                channels.append({"name": ch_name, "url": clean_url})
             else:
                 # Fallback to last segment if structure is different
                 ch_name = line.split('/')[-2] if '/' in line else "Channel"
-                channels.append({"name": ch_name, "url": line})
+                clean_url = line.split('?')[0].split('#')[0]
+                channels.append({"name": ch_name, "url": clean_url})
 
     print(f"Found {len(channels)} channels. Starting generation...")
 
