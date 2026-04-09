@@ -1,9 +1,8 @@
 name: Update Channels (Auto Sync MPD & Keys)
 
 on:
-  push:
-    paths:
-      - 'jtv.m3u'
+  schedule:
+    - cron: '0 */6 * * *' # Checks every 6 hours
   workflow_dispatch: # Allow manual trigger
 
 permissions:
@@ -24,6 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests
+
+      - name: Download external M3U
+        run: |
+          echo "Downloading latest jtv.m3u..."
+          curl -fSL "https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u" -o jtv.m3u
+          echo "Download complete. File size: $(wc -c < jtv.m3u) bytes"
 
       - name: Generate channel HTML files
         run: python generate_channels.py
