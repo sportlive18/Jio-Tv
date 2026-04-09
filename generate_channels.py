@@ -217,8 +217,9 @@ line-height:1.6;
   }
 });
 
+    const drmConfig = (CONFIG.keyId && CONFIG.key) ? {clearKeys:{[CONFIG.keyId]:CONFIG.key}} : {};
     player.configure({
-      drm:{clearKeys:{[CONFIG.keyId]:CONFIG.key}},
+      drm: drmConfig,
       manifest:{defaultPresentationDelay:5},
       streaming:{
         lowLatencyMode:true,
