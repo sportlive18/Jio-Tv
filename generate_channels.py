@@ -178,13 +178,43 @@ def generate():
             current_key_url = ""
 
     print(f"Found {len(raw_channels)} channels. Fetching keys...", flush=True)
+    
+    # Pre-list logos for matching
+    existing_logos = []
+    if os.path.exists("logos"):
+        existing_logos = {f.lower(): f for f in os.listdir("logos") if f.lower().endswith(".png")}
+    
     session = requests.Session()
     def process_channel(ch):
         kid, k, l_url = fetch_key(ch['key_url'], session)
         if not ch['key_url'].startswith("http") and ":" in ch['key_url']:
             parts = ch['key_url'].split(":")
             kid, k, l_url = parts[0], parts[1], ""
-        return {"name": ch['name'], "url": ch['url'], "keyId": kid, "key": k, "licenseUrl": l_url, "cookie": ch['cookie']}
+            
+        # Logo matching
+        logo_path = ""
+        base_name = ch['name'].lower()
+        # Try multiple candidates: full name, name without _MOB, name without _BTS, etc.
+        candidates = [
+            base_name + ".png",
+            base_name.replace("_mob", "") + ".png",
+            base_name.replace("_bts", "") + ".png",
+            base_name.split("_")[0] + ".png"
+        ]
+        for cand in candidates:
+            if cand in existing_logos:
+                logo_path = "logos/" + existing_logos[cand]
+                break
+                
+        return {
+            "name": ch['name'],
+            "url": ch['url'],
+            "keyId": kid,
+            "key": k,
+            "licenseUrl": l_url,
+            "cookie": ch['cookie'],
+            "logo": logo_path
+        }
 
     with ThreadPoolExecutor(max_workers=10) as executor:
         channels = list(executor.map(process_channel, raw_channels))
