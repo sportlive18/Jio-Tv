@@ -29,18 +29,18 @@
   {
     "name": "moviesnow_wv_drm",
     "url": "https://times-ott-live.akamaized.net/moviesnow_wv_drm/index.mpd",
-    "keyId": "40f019b86241d23ef075633fd7f1e927",
-    "key": "058dec845bd340178a388edd104a015e",
-    "licenseUrl": "",
+    "keyId": "",
+    "key": "",
+    "licenseUrl": "https://temp.webplay.fun/jtv/key.php?id=151",
     "cookie": "__hdnea__=st=1777959609~exp=1777981209~acl=/*~hmac=d6bf23c3703963818b7b2690e0fb60191015e565735ff2b915f3f7911fac5efd",
     "logo": ""
   },
   {
     "name": "ZeeTalkies_MOB",
     "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeTalkies_MOB/WDVLive/index.mpd",
-    "keyId": "2f20fb86cf6857b4b9048772dc9edc10",
-    "key": "5bc8fcee5dd070516dbdc665d3df989d",
-    "licenseUrl": "",
+    "keyId": "",
+    "key": "",
+    "licenseUrl": "https://temp.webplay.fun/jtv/key.php?id=153",
     "cookie": "__hdnea__=st=1777959609~exp=1777981209~acl=/*~hmac=d6bf23c3703963818b7b2690e0fb60191015e565735ff2b915f3f7911fac5efd",
     "logo": "logos/ZeeTalkies.png"
   },
@@ -56,18 +56,18 @@
   {
     "name": "Travel_XP_HD_MOB",
     "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/Travel_XP_HD_MOB/WDVLive/index.mpd",
-    "keyId": "157cd1bd71a256fe8ab763ba280320e5",
-    "key": "6befde8b90b6926423cc83775b8dcb59",
-    "licenseUrl": "",
+    "keyId": "",
+    "key": "",
+    "licenseUrl": "https://temp.webplay.fun/jtv/key.php?id=164",
     "cookie": "__hdnea__=st=1777959609~exp=1777981209~acl=/*~hmac=d6bf23c3703963818b7b2690e0fb60191015e565735ff2b915f3f7911fac5efd",
     "logo": "logos/Travel_XP_HD.png"
   },
   {
     "name": "ZeeCinemaHD_MOB",
     "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeCinemaHD_MOB/WDVLive/index.mpd",
-    "keyId": "93d51baa27315cbfa26df35c3c3e47b6",
-    "key": "c3b38db5542719e8e10008e9193089e6",
-    "licenseUrl": "",
+    "keyId": "",
+    "key": "",
+    "licenseUrl": "https://temp.webplay.fun/jtv/key.php?id=165",
     "cookie": "__hdnea__=st=1777959609~exp=1777981209~acl=/*~hmac=d6bf23c3703963818b7b2690e0fb60191015e565735ff2b915f3f7911fac5efd",
     "logo": "logos/ZeeCinemaHD.png"
   },
@@ -83,9 +83,9 @@
   {
     "name": "ZeeTVHD_MOB",
     "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeTVHD_MOB/WDVLive/index.mpd",
-    "keyId": "6a472713dd855718b1dc24986efbc752",
-    "key": "4215cd7cf5915d1c4f704137ad211f45",
-    "licenseUrl": "",
+    "keyId": "",
+    "key": "",
+    "licenseUrl": "https://temp.webplay.fun/jtv/key.php?id=167",
     "cookie": "__hdnea__=st=1777959609~exp=1777981209~acl=/*~hmac=d6bf23c3703963818b7b2690e0fb60191015e565735ff2b915f3f7911fac5efd",
     "logo": "logos/ZeeTVHD.png"
   },
